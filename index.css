@@ -1,4 +1,96 @@
 body
 {
-    background-color:lightskyblue;
+
+}
+
+a:link, a:visited, a:hover, a:active
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+h2
+{
+    text-align:center;
+    style: underline;
+}
+
+div
+{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+div.button
+{
+    position: relative;
+    text-align:center;
+    height: 18px;
+    width: 100px;
+    padding: 5px;
+    on-hover:
+}
+
+#buttonbox
+{
+    margin: auto;
+    margin-top:7px;
+    width: 800px;
+    height: 30px;
+    border-style:none;
+}
+
+#div1
+{
+    background-color:tan;
+}
+
+#div2
+{
+    left: 115px;
+    top: -32px;
+    background-color:tan;
+}
+
+#div3
+{
+    left: 230px;
+    top: -64px;
+    background-color:tan;
+}
+
+#div4
+{
+    left: 345px;
+    top: -96px;
+    background-color:tan;
+}
+
+#main
+{
+    margin:auto;
+    margin-top:5px;
+    width: 800px;
+    height: 100%;
+    padding: 10px;
+    background-color:tan;    
+}
+
+#pic
+{
+    height: 250px;
+    margin-right:auto;
+    float: left;
+}
+
+.clear
+{
+    clear:both;
+}
+
+p
+{
+   margin-left:20px;
 }
