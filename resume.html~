@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Chad Carey's Homepage</title>
+  <link rel="stylesheet" type="text/css" href="index.css"/>
+
+<style>
+</style>
+
+</head>
+<body>
+
+  <!--menubar-->
+  <div id="buttonbox">
+    <a href="index.html"><div id="div1" class="button">About Me</div></a>
+    <a href="assign.html"><div id="div2" class="button">Assignments</div></a>
+    <a href="resume.html"><div id="div3" class="button">Resume</div></a>
+    <a href="goals.html"><div id="div4" class="button">Goals</div></a>
+  </div>
+
+  <!--Content-->
+  <div id="main">
+    <h2>Welcome to Chad Carey's Homepage</h2>
+    <h3>About Me</h3>
+    <img id="pic" src="picture1.JPG"/>
+    <p>I am a computer science major at Brigham Young university-Idaho.</p>
+    <br class="clear"/>
+  </div>
+
+</body>
+
+</html>
