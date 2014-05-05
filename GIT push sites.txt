@@ -1,0 +1,5 @@
+// push to OpenShift
+git push origin master
+
+//push to GitHub
+git push github master

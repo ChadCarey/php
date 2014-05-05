@@ -9,24 +9,31 @@
 <style>
 </style>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script>
+function pLoad(page)
+{
+    $(document).ready(function(){
+        $("#main").load(page);
+     });
+}
+</script>
+
 </head>
 <body>
 
   <!--menubar-->
   <div id="buttonbox">
-    <a href="index.html"><div id="div1" class="button">About Me</div></a>
-    <a href="assign.html"><div id="div2" class="button">Assignments</div></a>
-    <a href="resume.html"><div id="div3" class="button">Resume</div></a>
-    <a href="goals.html"><div id="div4" class="button">Goals</div></a>
+    <div id="div1" onclick="pLoad('about.txt')" class="button">About Me</div>
+    <div id="div2" onclick="pLoad('assign.txt')" class="button">Assignments</div>
+    <div id="div3" onclick="pLoad('resume.txt')" class="button">Resume</div>
+    <div id="div4" onclick="pLoad('goals.txt')" class="button">Goals</div>
   </div>
 
   <!--Content-->
   <div id="main">
-    <h2>Welcome to Chad Carey's Homepage</h2>
-    <h3>About Me</h3>
-    <img id="pic" src="picture1.JPG"/>
-    <p>I am a computer science major at Brigham Young University-Idaho.</p>
-    <br class="clear"/>
+
   </div>
 
 </body>
