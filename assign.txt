@@ -1,3 +1,6 @@
     <h2>Welcome to Chad Carey's Homepage</h2>
     <h3>Assignments</h3>
-    <p>Comming soon</p>
+    <ul>
+    <li><a href="phpVotes.html">PHP Votes</a></li>
+    </ul>
+

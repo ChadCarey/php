@@ -1,13 +1,12 @@
 body
 {
-/*    background-image: url("b.jpg");*/
-background-color: rgba(49, 93, 93, 1);
+    background-color: rgba(49, 93, 93, 1);
 }
 
 a:link, a:visited, a:hover, a:active
 {
-    color: inherit;
-    text-decoration: none;
+    color: red;
+    text-decoration: underline;
 }
 
 h2
@@ -16,13 +15,22 @@ h2
     text-decoration: underline;
 }
 
-div
+div, form
 {
     border-width: 2px;
     border-color: black;
     border-style: solid;
 }
 
+.bold
+{
+    font-weight: 600;
+}
+
+#div1
+{
+    margin:auto;
+}
 
 div.button
 {
@@ -52,14 +60,12 @@ div.button:hover
 
 #main
 {
-    display:none;
     margin:auto;
     margin-top:7px;
     margin-left: 230px;
-    width:800px;
-    height: 700px;
+    width: 800px;
     padding: 1.3em;
-    background-color:lightgray;    
+    background-color:lightgray;
 }
 
 #pic
@@ -74,6 +80,3 @@ div.button:hover
     clear:both;
 }
 
-p
-{
-}
