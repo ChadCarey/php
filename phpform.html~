@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="assign.css"/>
+
+<style>
+</style>
+
+</head>
+<body>
+
+    <a href="index.html"><div id="home" class="button">Home</div></a>
+
+    <h2>PHP Form</h2>
+
+  <!--Content-->
+  <div id="main">
+    <form action="phpform.php" method="POST">
+      Name: <input type="text" name="name"/> 
+      Email: <input type="text" name="email"/>
+
+      Major: 
+
+      Computer Science: <input type="radio" name="major" value="compsci"/> 
+
+      Web Developement and Design: 
+      <input type="radio" name="major" value="webdev"/>
+
+      Computer Information and Technology: 
+      <input type="radio" name="major" value="comptech"/>
+
+      Computer Engineering
+      <input type="radio" name="major" value="compeng"/>
+
+      Places you have vistied: 
+      <input type="checkbox" name="place[]" value="namer"/>
+      North America
+
+      <input type="checkbox" name="place[]" value="samer"/>
+      South America
+
+      <input type="checkbox" name="place[]" value="eur"/>
+      Europe
+
+      <input type="checkbox" name="place[]" value="asia"/>
+      Asia
+
+      <input type="checkbox" name="place[]" value="aust"/>
+      Australia
+
+      <input type="checkbox" name="place[]" value="afri"/>
+      Africa
+
+      <input type="checkbox" name="place[]" value="anta"/>
+      Antartica
+
+      <input type="submit"/>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

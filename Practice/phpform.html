@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="assign.css"/>
+
+<style>
+</style>
+
+</head>
+<body>
+
+    <a href="index.html"><div id="home" class="button">Home</div></a>
+
+    <h2>PHP Form</h2>
+
+  <!--Content-->
+  <div id="main">
+    <form action="phpform.php" method="POST">
+      <p>Name: <input type="text" name="name"/> </p>
+      <p>Email: <input type="text" name="email"/></p>
+
+      <br />
+      <p>Major: </p>
+
+      <p>
+         <input type="radio" name="major" value="Computer Science"/> 
+      Computer Science
+      </p>
+
+      <p>
+      <input type="radio" name="major" value="Web Developement and Design"/>
+      Web Developement and Design: 
+      </p>
+
+      <p>
+      <input type="radio" name="major" 
+      value="Computer Information and Technology"/>
+      Computer Information and Technology: 
+      </p>
+
+      <p>
+      <input type="radio" name="major" value="Computer Engineering"/>
+      Computer Engineering
+      </p>
+      <br />
+
+      <p>Places you have vistied: </p>
+      <p>
+      <input type="checkbox" name="place[]" value="North Americar"/>
+      North America
+      </p>
+
+      <p>
+      <input type="checkbox" name="place[]" value="South America"/>
+      South America
+      </p>
+
+      <p>
+      <input type="checkbox" name="place[]" value="Europe"/>
+      Europe
+      </p>
+
+      <p>
+      <input type="checkbox" name="place[]" value="Asia"/>
+      Asia
+      </p>
+
+      <p>
+      <input type="checkbox" name="place[]" value="Australia"/>
+      Australia
+      </p>
+
+      <p>
+      <input type="checkbox" name="place[]" value="Africa"/>
+      Africa
+      </p>
+
+      <p>
+      <input type="checkbox" name="place[]" value="Antartica"/>
+      Antartica
+      </p>
+
+      <p>
+      <p>Comments: </p>
+      <textarea  name="comments"></textarea> 
+      </p>
+
+      <input type="submit"/>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

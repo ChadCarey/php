@@ -1,0 +1,78 @@
+body
+{
+/*    background-image: url("b.jpg");*/
+background-color: rgba(49, 93, 93, 1);
+}
+
+a:link, a:visited, a:hover, a:active
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+h2
+{
+    text-align:center;
+    text-decoration: underline;
+}
+
+div
+{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+div.button
+{
+    text-align:center;
+    height: 40px;
+    width: 200px;
+    padding-top: 20px;
+    background-color:lightgray;
+}
+
+div.button:hover
+{
+    opacity: 0.8;
+}
+
+#buttonbox
+{
+    position:fixed;
+    margin: auto;
+    float:left;
+    margin-top:7px;
+    margin-left:5px;
+    margin-right:10px;
+    width: 100px;
+    border-style:none;
+}
+
+#main
+{
+    margin:auto;
+    margin-top:7px;
+    margin-left: 230px;
+    width:800px;
+    height: 700px;
+    padding: 1.3em;
+    background-color:lightgray;    
+}
+
+#pic
+{
+    height: 250px;
+    margin-right:10px;
+    float: left;
+}
+
+.clear
+{
+    clear:both;
+}
+
+p
+{
+}
