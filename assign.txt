@@ -2,5 +2,6 @@
     <h3>Assignments</h3>
     <ul>
     <li><a href="phpVotes.html">PHP Votes</a></li>
+    <li><a href="phpSQLAccess.php">SQL access from php</a></li>
     </ul>
 
