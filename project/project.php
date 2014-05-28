@@ -64,7 +64,7 @@
     }
     catch (PDOException $x)
     {
-     echo "<p>failed to read from database</p><br/>";
+     echo "<p>failed to read from database</p><br/> Details $x";
     }
    
 
