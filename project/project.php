@@ -28,7 +28,8 @@
 
     try 
     {
-     $db = new PDO("mysql:host=localhost; dbname=rexburg_apt", $user, $password);
+     $db = loadDatabase();
+//new PDO("mysql:host=localhost; dbname=rexburg_apt", $user, $password);
      $aData = $db->prepare($aNameSearch);
 //     $aData->bindValue("", "", PDO::PARAM_STR);
      $aData->execute();
