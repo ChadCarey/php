@@ -1,7 +1,5 @@
 
 function validate() {
-    document.getElementById('temp').innerHTML = "<p>function called</p>"
-
     var name = document.forms['form']['name'].value;
     if( !(/[a-zA-Z]+/).test(name))
 	return false;
@@ -23,9 +21,6 @@ function validate() {
     var electric = document.forms['form']['electric'].value;
     if( !(/[0-9]+.*/).test(electric))
 	return false;
-
-   document.getElementById('temp').innerHTML = "<p>function function finished</p>"
-
 
     return true;
 }
