@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-</head>
+<head></head>
 
 <body>
   <?php
-     require("aSetup");
+     require("aSetup.php");
 
   function validData()
   {
@@ -34,19 +32,25 @@
     $internet = (float)$_POST['internet'];
     $city = (float)$_POST['city'];
 
-    $pdb = $db->prepare("INSERT INTO utilities (gas, electric, internet, 
-                   city_utilities) VALUES ($gas, $electric, $internet, $city);");
-    $pdb->execute();
+	    $pdb = $db->prepare("INSERT INTO utilities (gas, electric, internet, city_utilities) VALUES (:gas, :electric, :internet, :city);");
+	$pdb->bindvalue(':gas', $gas);
+	$pdb->bindvalue(':electric', $electric);
+	$pdb->bindvalue(':internet', $internet);
+	$pdb->bindvalue(':city', $city);
+	$pdb->execute();
+	$util = $db->lastInsertId();
+	echo "<p>$util</p>";
 
-    // get utilities id
-    $util = $db->lastInsertId();
-
-    // add apartment
-    $pdb = $db->prepare("INSERT INTO apartment (utilities, cost, 
-                  type, miles_from_campus, name) VALUES ($util, $cost, 
-                 '$type', $distance, '$name');");
-    $pdb->execute();
-  header("Location: project.php");
+	$pdb = $db->prepare("INSERT INTO apartment (utilities, cost, type, miles_from_campus, name) VALUES (:util, :cost, :type, :distance, :name);");
+	$pdb->bindvalue(':name', $name, PDO::PARAM_STR);
+	$pdb->bindvalue(':type', $type, PDO::PARAM_STR);
+	$pdb->bindvalue(':util', $util);
+	$pdb->bindvalue(':cost', $cost);
+	$pdb->bindvalue(':distance', $distance);
+	$pdb->execute();
+   	$util = $db->lastInsertId(); 
+		echo "<p>$util</p>";
+    header("Location: project.php");
    }
    else
    {

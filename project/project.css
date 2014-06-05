@@ -34,13 +34,9 @@ form
     right: 10px;
 }
 
-a:link
-{
-    color: black;
-}
-
 td
 {
+    background-color: tan;
     text-align:center;
     border-color: black;
     border-style: solid;
@@ -48,3 +44,11 @@ td
 
 }
 
+th
+{
+    background-color: DarkGoldenRod;
+    text-align:center;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+}

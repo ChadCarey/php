@@ -13,7 +13,8 @@
   Search: <input type="text" name="search"/>
   Search by: 
   <select name="sType">
-   <option value="aName">Apartment Name</option>
+   <option value="name">Apartment Name</option>
+  <option value="cost">Cost</option>
   </select>
   <input type="submit" value="Search"/>
  </form>
@@ -26,7 +27,7 @@
   <h2>Apartments</h2>
   <?php 
 
-     require("aSetup");
+     require("aSetup.php");
 
      function readDB($db) 
      {
@@ -36,8 +37,9 @@
       if (isset($_GET["search"])) // display search querry
       {
        $search = $_GET["search"];
+       $type = $_GET["sType"];
        echo "<h3>Search Results for $search</h3>";
-       $aNameSearch = "SELECT * FROM apartment WHERE name='$search';";
+       $aNameSearch = "SELECT * FROM apartment WHERE $type='$search';";
       }
       $aData = $db->prepare($aNameSearch);
       $aData->execute();
