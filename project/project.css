@@ -38,3 +38,13 @@ a:link
 {
     color: black;
 }
+
+td
+{
+    text-align:center;
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+
+}
+

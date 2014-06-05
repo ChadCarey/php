@@ -4,30 +4,40 @@
 <head>
 
 <script type="text/javascript" src="project.js"></script>
+<link type="text/css" rel="stylesheet" href="project.css"/>
 
 </head>
 
 <body>
- <form method="GET" action="">
-  Search: <input type="text" name = "search"/>
+ <form method="GET" action="" id="searchform">
+  Search: <input type="text" name="search"/>
   Search by: 
   <select name="sType">
    <option value="aName">Apartment Name</option>
   </select>
   <input type="submit" value="Search"/>
  </form>
- 
+
+<a href="projectAddItem.php"><div class="button" id="addlink">
+    Add an Apartment
+</div></a>
+
  <div id="main">
   <h2>Apartments</h2>
   <?php 
+
      require("aSetup");
 
      function readDB($db) 
      {
+     // default querry
       $aNameSearch = "SELECT * FROM apartment;";
-      if (isset($GET["search"])) // display search querry
+     // search querry
+      if (isset($_GET["search"])) // display search querry
       {
-       echo "<h3>Search Results</h3>";
+       $search = $_GET["search"];
+       echo "<h3>Search Results for $search</h3>";
+       $aNameSearch = "SELECT * FROM apartment WHERE name='$search';";
       }
       $aData = $db->prepare($aNameSearch);
       $aData->execute();
@@ -61,60 +71,14 @@
       echo "</table>\n\n";
      }
 
-  function validData() 
-  {
-   if( isSet($_POST['name'])     && isSet($_POST['type'])     && 
-       isSet($_POST['cost'])     && isSet($_POST['distance']) && 
-       isSet($_POST['internet']) && isSet($_POST['city'])     && 
-       isSet($_POST['gas'])      && isSet($_POST['electric']) )
-   {
-    return true;
-   }
-    return false;
-  }
-
-
-  function writeDB($db) 
-  {
-   if(validData())
-   {
-    echo "<h1>Data entered</h1>";
-    $name = $_POST['name'];
-    $type = $_POST['type'];
-    $cost = (float)$_POST['cost'];
-    $distance = (int)$_POST['distance'];
-    $gas = (float)$_POST['gas'];
-    $electric = (float)$_POST['electric'];
-    $internet = (float)$_POST['internet'];
-    $city = (float)$_POST['city'];
-
-    $pdb = $db->prepare("INSERT INTO utilities (gas, electric, internet, city_utilities) VALUES ($gas, $electric, $internet, $city);");
-    $pdb->execute();
-
-    // get utilities id
-    $util = $db->lastInsertId();
-
-    $pdb = $db->prepare("INSERT INTO apartment (utilities, cost, type, miles_from_campus, name) VALUES ($util, $cost, '$type', $distance, '$name');");
-    $pdb->execute();
-   }
-   else
-   {
-    echo "<h1>No data entered</h1>";
-   }
-  }
-
 
 // Main execution
     try 
     {
+     // prepare database
      $db = loadDatabase();
-
-     // write to database
-     writeDB($db);
- 
      // read from the database
      readDB($db);
-     
     }
     catch (PDOException $x)
     {
@@ -122,26 +86,9 @@
     }
    
   ?>
- </div>
- 
-<br/>
-<div id='temp'></div>
-<form name="form" action="" onsubmit="return validate()" method="POST">
-  Apartment Name: <input type="text" name="name"/>
-  Type: 
-  <select name="type">
-    <option value="MARRIED">Married</option>
-    <option value="SINGLE">Single</option>
-  </select>
-  Price: <input type="text" name="cost"/>
-  Distance from campus: <input type="text" name="distance"/><br/>
-  Gas Price: <input type="text" name="gas"/>
-  Electric Price: <input type="text" name="electric"/><br/>
-  Internet Price: <input type="text" name="internet"/>
-  City Utilities Price: <input type="text" name="city"/>
-  <br/><input type="submit" value="Submit"/>
-</form>
 
+ </div><!--Main div-->
+ 
 </body>
 
 </html>
