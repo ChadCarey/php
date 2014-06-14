@@ -4,5 +4,10 @@
     <li><a href="phpVotes.html">PHP Votes</a></li>
     <li><a href="phpSQLAccess.php">SQL access from php</a></li>
     <li><a href="/project/project.php">Apartment project</a></li>
+    <li>
+	<a href="http://javawebapps-chadsopenshift.rhcloud.com/helloJavaWeb/">
+	Hello Java Web App
+	</a>
+    </li>
     </ul>
 
