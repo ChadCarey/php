@@ -9,5 +9,11 @@
 	Hello Java Web App
 	</a>
     </li>
+    <li>
+	<a href="http://javawebapps-chadsopenshift.rhcloud.com/CommentSaver/">
+	Comment Saver Web App
+	</a>
+    </li>
+
     </ul>
 
